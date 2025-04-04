@@ -1,0 +1,81 @@
+salary:
+  interval: 30
+  amounts:
+    sheriff:
+      deputy: 100
+      chief: 200
+    medic:
+      trainee: 80
+      doctor: 120
+items:
+  pill:
+    price: 50.0
+    health_restore: 4
+  bandage:
+    price: 30.0
+    duration: 5
+  medkit:
+    price: 100.0
+
+ranks:
+ sheriff1: "Cadet"
+ sheriff2: "Deputy"
+ medic1: "Trainee"
+  # Add other ranks as necessary
+
+# ذخیره‌سازی داده‌های شغلی
+players:
+  123e4567-e89b-12d3-a456-426614174000:
+    job: "medic"
+    onDuty: true
+  456f7890-f12c-34d5-b678-527895275000:
+    job: "sheriff"
+    onDuty: false
+
+
+jobs:
+  sheriff:
+    prefix: "&9[Sheriff] "
+    ranks:
+      deputy:
+        display: " &7[Deputy]"
+      sergeant:
+        display: " &e[Sgt]"
+      chief:
+        display: " &6[Chief]"
+
+  medic:
+    prefix: "&c[Medic] "
+    ranks:
+      trainee:
+        display: " &7[Trainee]"
+      doctor:
+        display: " &4[Doctor]"
+      surgeon:
+        display: " &c[Surgeon]"
+
+  news:
+    prefix: "&f[News] "
+    ranks:
+      reporter:
+        display: " &7[Reporter]"
+      anchor:
+        display: " &f[Anchor]"
+
+
+messages:
+  fire:
+    admin: "&aYou have fired &b{player} &afrom &6{job} &ajob."
+    player: "&cYou have been fired from your job!"
+    no-job: "&cThis player doesn't have a job!"
+
+rank_priority:
+  - sheriff1
+  - sheriff2
+  - sheriff3
+  - medic1
+  - medic2
+  - medic3
+  - news1
+  - news2
+  - news3

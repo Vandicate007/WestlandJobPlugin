@@ -1,0 +1,144 @@
+name: WLjob
+version: 1.0
+main: org.westlandmc.wljob.Main
+api-version: 1.20
+softdepend: [LuckPerms]
+depend: [Vault, LuckPerms]
+author: VANDICATE
+description: A job management plugin for WESTLANDMC
+
+commands:
+  wljobreload:
+    description: Reloads the WLJob plugin configuration.
+    usage: /wljobreload
+    permission: wljob.reload
+  setjob:
+    description: Assign a job to a player
+    usage: /setjob <player> [job]
+    permission: wljob.setjob
+  promote:
+    description: Promote a player in their job
+    usage: /promote <player>
+    permission: wljob.promote
+  demote:
+    description: Demote a player in their job
+    usage: /demote <player>
+    permission: wljob.demote
+  firejob:
+    description: Fire a player from their job
+    usage: /firejob <player>
+    permission: wljob.firejob
+  getmedkit:
+    description: Gives the player a Medkit
+    usage: /getmedkit
+    permission: medic.getmedkit
+    permission-message: You don't have permission to use this command.
+  getbandage:
+    description: Give a bandage to the player.
+    usage: /getbandage
+    permission: medic.items
+  accept:
+    description: Accepts a bandage request.
+    usage: /accept
+  getpill:
+    description: Buy a health pill.
+    usage: /getpill
+    permission: wljob.getpill
+  joblist:
+    description: View members of a job
+    usage: /joblist [job]
+    permission: wljob.joblist
+  onduty:
+    description: Put yourself On-Duty
+    usage: /onduty
+    permission: wljob.onduty
+  offduty:
+    description: Go Off-Duty
+    usage: /offduty
+    permission: wljob.offduty
+  wljob.getpill:
+    description: Allows the player to buy a health pill.
+    default: true
+  requestmedic:
+    description: Request a medic when knocked down
+    usage: /requestmedic
+    permission: wljob.requestmedic
+  knock:
+    description: Knock down a player (Admin only)
+    usage: /knock <player>
+    permission: wljob.admin
+  revive:
+    description: Revive a knocked-down player (Admin only)
+    usage: /revive <player>
+    permission: wljob.admin
+  medicgui:
+    description: "باز کردن GUI بازیکنان ناک شده برای مدیک‌ها"
+    usage: "/medicgui"
+    permission: ""
+
+permissions:
+  wljob.admin:
+    description: Admin permissions for WLJob plugin.
+    default: true
+  wljob.setjob:
+    description: Allows a player to set jobs (Admin only for job selection)
+    default: op
+  wljob.promote:
+    description: Allows players to promote others within their department
+    default: true
+  wljob.demote:
+    description: Allows players to demote others within their department
+    default: true
+  wljob.firejob:
+    description: Allows players to fire others within their department
+    default: true
+  wljob.joblist:
+    description: Allows players to view job members
+    default: true
+  wljob.joblist.admin:
+    description: Allows admins to view all job members
+    default: op
+  wljob.joblist.player:
+    description: Allows players to view only their own job members
+    default: true
+  wljob.onduty:
+    description: Allows players to use /onduty
+    default: true
+  wljob.offduty:
+    description: Allows players to use /offduty
+    default: true
+  wljob.reload:
+    description: Allows the player to reload the plugin.
+    default: op
+groups:
+  sheriff1:
+    description: "رتبه اول شریف"
+  sheriff2:
+    description: "رتبه دوم شریف"
+  sheriff3:
+    description: "رتبه سوم شریف"
+  sheriff4:
+    description: "رتبه چهارم شریف"
+  sheriff5:
+    description: "رتبه پنجم شریف"
+  sheriff6:
+    description: "رتبه ششم شریف"
+  sheriff7:
+    description: "رتبه هفتم شریف"
+  sheriff8:
+    description: "رتبه هشتم شریف"
+  sheriff9:
+    description: "رتبه نهم شریف"
+  sheriff10:
+    description: "رتبه دهم شریف"
+  sheriff11:
+    description: "رتبه یازدهم (رئیس)"
+
+  medic1: "رتبه اول مدیک"
+  medic2: "رتبه دوم مدیک"
+  medic3: "رتبه سوم مدیک"
+  medic4: "رتبه چهارم مدیک"
+  medic5: "رتبه پنجم مدیک"
+  medic6: "رتبه ششم مدیک"
+  medic7: "رتبه هفتم مدیک"
+  medic8: "رتبه هشتم مدیک"
